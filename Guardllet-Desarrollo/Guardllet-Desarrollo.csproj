@@ -71,7 +71,35 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Frontend\" />
+    <Folder Include="Backend\Data\Accounts\" />
+    <Folder Include="Backend\Data\Customers\" />
+    <Folder Include="Backend\Data\Movements\" />
+    <Folder Include="Backend\Data\Products\" />
+    <Folder Include="Backend\Data\Wallet\" />
+    <Folder Include="Backend\Emails\" />
+    <Folder Include="Backend\Messages\" />
+    <Folder Include="Backend\Reports\" />
+    <Folder Include="Backend\Transactions\" />
+    <Folder Include="Frontend\Accounts\Css\" />
+    <Folder Include="Frontend\Accounts\Js\" />
+    <Folder Include="Frontend\Accounts\Multimedia\Pictures\" />
+    <Folder Include="Frontend\Accounts\Multimedia\Videos\" />
+    <Folder Include="Frontend\Administrators\Css\" />
+    <Folder Include="Frontend\Administrators\Js\" />
+    <Folder Include="Frontend\Administrators\Multimedia\Pictures\" />
+    <Folder Include="Frontend\Administrators\Multimedia\Videos\" />
+    <Folder Include="Frontend\Customers\Css\" />
+    <Folder Include="Frontend\Customers\Js\" />
+    <Folder Include="Frontend\Customers\Multimedia\Pictures\" />
+    <Folder Include="Frontend\Customers\Multimedia\Videos\" />
+    <Folder Include="Frontend\Landing page\Css\" />
+    <Folder Include="Frontend\Landing page\Js\" />
+    <Folder Include="Frontend\Landing page\Multimedia\Pictures\" />
+    <Folder Include="Frontend\Landing page\Multimedia\Videos\" />
+    <Folder Include="Frontend\Sellers\Css\" />
+    <Folder Include="Frontend\Sellers\Js\" />
+    <Folder Include="Frontend\Sellers\Multimedia\Pictures\" />
+    <Folder Include="Frontend\Sellers\Multimedia\Videos\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
