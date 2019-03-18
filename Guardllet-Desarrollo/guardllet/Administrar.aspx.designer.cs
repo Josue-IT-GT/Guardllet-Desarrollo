@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Guardllet_Desarrollo.Frontend.Landing_page
+namespace Guardllet_Desarrollo.Frontend.Administrators
 {
 
 
-    public partial class guardllet
+    public partial class Administrar
     {
 
         /// <summary>

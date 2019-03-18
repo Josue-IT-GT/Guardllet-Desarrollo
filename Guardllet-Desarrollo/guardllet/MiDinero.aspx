@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="guardllet.aspx.cs" Inherits="Guardllet_Desarrollo.Frontend.Landing_page.guardllet" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MiDinero.aspx.cs" Inherits="Guardllet_Desarrollo.Frontend.Customers.MiDinero" %>
 
 <!DOCTYPE html>
 

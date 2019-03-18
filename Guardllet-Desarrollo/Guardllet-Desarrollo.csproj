@@ -57,9 +57,65 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="guardllet.aspx" />
+    <Content Include="guardllet\Completar-Datos.aspx" />
+    <Content Include="guardllet\Entra.aspx" />
+    <Content Include="guardllet\Registrate.aspx" />
+    <Content Include="guardllet\Administrar.aspx" />
+    <Content Include="guardllet\MiDinero.aspx" />
+    <Content Include="guardllet\Vender.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="guardllet.aspx.cs">
+      <DependentUpon>guardllet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="guardllet.aspx.designer.cs">
+      <DependentUpon>guardllet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="guardllet\Completar-Datos.aspx.cs">
+      <DependentUpon>Completar-Datos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="guardllet\Completar-Datos.aspx.designer.cs">
+      <DependentUpon>Completar-Datos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="guardllet\Entra.aspx.cs">
+      <DependentUpon>Entra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="guardllet\Entra.aspx.designer.cs">
+      <DependentUpon>Entra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="guardllet\Registrate.aspx.cs">
+      <DependentUpon>Registrate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="guardllet\Registrate.aspx.designer.cs">
+      <DependentUpon>Registrate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="guardllet\Administrar.aspx.cs">
+      <DependentUpon>Administrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="guardllet\Administrar.aspx.designer.cs">
+      <DependentUpon>Administrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="guardllet\MiDinero.aspx.cs">
+      <DependentUpon>MiDinero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="guardllet\MiDinero.aspx.designer.cs">
+      <DependentUpon>MiDinero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="guardllet\Vender.aspx.cs">
+      <DependentUpon>Vender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="guardllet\Vender.aspx.designer.cs">
+      <DependentUpon>Vender.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -80,26 +136,24 @@
     <Folder Include="Backend\Messages\" />
     <Folder Include="Backend\Reports\" />
     <Folder Include="Backend\Transactions\" />
-    <Folder Include="Frontend\Accounts\Css\" />
-    <Folder Include="Frontend\Accounts\Js\" />
-    <Folder Include="Frontend\Accounts\Multimedia\Pictures\" />
-    <Folder Include="Frontend\Accounts\Multimedia\Videos\" />
-    <Folder Include="Frontend\Administrators\Css\" />
-    <Folder Include="Frontend\Administrators\Js\" />
-    <Folder Include="Frontend\Administrators\Multimedia\Pictures\" />
-    <Folder Include="Frontend\Administrators\Multimedia\Videos\" />
-    <Folder Include="Frontend\Customers\Css\" />
-    <Folder Include="Frontend\Customers\Js\" />
-    <Folder Include="Frontend\Customers\Multimedia\Pictures\" />
-    <Folder Include="Frontend\Customers\Multimedia\Videos\" />
-    <Folder Include="Frontend\Landing page\Css\" />
-    <Folder Include="Frontend\Landing page\Js\" />
-    <Folder Include="Frontend\Landing page\Multimedia\Pictures\" />
-    <Folder Include="Frontend\Landing page\Multimedia\Videos\" />
-    <Folder Include="Frontend\Sellers\Css\" />
-    <Folder Include="Frontend\Sellers\Js\" />
-    <Folder Include="Frontend\Sellers\Multimedia\Pictures\" />
-    <Folder Include="Frontend\Sellers\Multimedia\Videos\" />
+    <Folder Include="guardllet\Css\Administrar\" />
+    <Folder Include="guardllet\Css\Completar-Datos\" />
+    <Folder Include="guardllet\Css\Entra\" />
+    <Folder Include="guardllet\Css\MiDinero\" />
+    <Folder Include="guardllet\Css\Registrate\" />
+    <Folder Include="guardllet\Css\Vender\" />
+    <Folder Include="guardllet\Js\Administrar\" />
+    <Folder Include="guardllet\Js\Completar-Datos\" />
+    <Folder Include="guardllet\Js\Entra\" />
+    <Folder Include="guardllet\Js\MiDinero\" />
+    <Folder Include="guardllet\Js\Registrate\" />
+    <Folder Include="guardllet\Js\Vender\" />
+    <Folder Include="guardllet\Multimedia\Administrar\" />
+    <Folder Include="guardllet\Multimedia\Completar-Datos\" />
+    <Folder Include="guardllet\Multimedia\Entra\" />
+    <Folder Include="guardllet\Multimedia\MiDinero\" />
+    <Folder Include="guardllet\Multimedia\Registrate\" />
+    <Folder Include="guardllet\Multimedia\Vender\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Guardllet_Desarrollo.Frontend.Landing_page
+namespace Guardllet_Desarrollo.Frontend.Customers
 {
-    public partial class guardllet : System.Web.UI.Page
+    public partial class MiDinero : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

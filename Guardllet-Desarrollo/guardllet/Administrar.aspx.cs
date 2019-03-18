@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Guardllet_Desarrollo.Frontend.Accounts
+namespace Guardllet_Desarrollo.Frontend.Administrators
 {
-    public partial class registro : System.Web.UI.Page
+    public partial class Administrar : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

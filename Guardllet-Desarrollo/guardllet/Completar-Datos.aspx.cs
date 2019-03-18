@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Guardllet_Desarrollo.Frontend.Accounts
 {
-    public partial class login : System.Web.UI.Page
+    public partial class Completar_Datos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
