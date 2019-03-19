@@ -13,8 +13,8 @@
         <asp:TextBox ID="TxtNombre" runat="server"></asp:TextBox>
         <asp:TextBox ID="TxtApellidoP" runat="server"></asp:TextBox>
         <asp:TextBox ID="TxtApellidoM" runat="server"></asp:TextBox>
-        <asp:TextBox ID="TxtCelular" runat="server"></asp:TextBox>
         <asp:TextBox ID="TxtBoleta" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TxtGrupo" runat="server"></asp:TextBox>
         <asp:Button ID="BtnCancelar" runat="server" Text="Button" />
         <asp:Button ID="BtnConfirmar" runat="server" Text="Button" />
     </div>

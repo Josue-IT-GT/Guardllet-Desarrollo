@@ -25,9 +25,13 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
         {
             
             bool login = SesionUsuario.IniciarSesion(TxtCorreo.Text,TxtContraseña.Text);
-            if (login) 
+            if (login)
             {
-                Console.WriteLine("Siiiiiiii");
+                
+            }
+            else 
+            {
+ 
             }
         }
     }

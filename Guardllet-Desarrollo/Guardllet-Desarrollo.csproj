@@ -67,7 +67,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Backend\Data\Accounts\RegistroUsuarios.cs" />
     <Compile Include="Backend\Data\Accounts\SesionUsuario.cs" />
+    <Compile Include="Backend\Data\Customers\DatosUsuario.cs" />
+    <Compile Include="Backend\Data\Customers\ObtenerDatos.cs" />
+    <Compile Include="Backend\Data\Wallet\CreacionMonedero.cs" />
+    <Compile Include="Backend\Data\Wallet\ObtenerMonedero.cs" />
     <Compile Include="guardllet.aspx.cs">
       <DependentUpon>guardllet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -128,10 +133,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Backend\Data\Customers\" />
     <Folder Include="Backend\Data\Movements\" />
     <Folder Include="Backend\Data\Products\" />
-    <Folder Include="Backend\Data\Wallet\" />
     <Folder Include="Backend\Emails\" />
     <Folder Include="Backend\Messages\" />
     <Folder Include="Backend\Reports\" />
