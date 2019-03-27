@@ -21,7 +21,7 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
                 using (SqlConnection Conexion = new SqlConnection(StringConexion))
                 {
                     Conexion.Open();
-                    SqlCommand command = new SqlCommand("RegistroDatos", Conexion);
+                    SqlCommand command = new SqlCommand("InicializarDatos", Conexion);
                     command.CommandType = CommandType.StoredProcedure;
 
                     SqlParameter param_nombre = new SqlParameter("@NOMBRE", SqlDbType.VarChar);
@@ -74,7 +74,7 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
             }
         }
 
-        public static bool Agregar(string nombre, string apellido_p, string apellido_m, string boleta, string grupo, string celular)
+        public static bool Agregar(string nombre, string apellido_p, string apellido_m, string boleta, string grupo)
         {
             bool resultado = false;
             string StringConexion = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
@@ -100,11 +100,6 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
                     param_apellidom.Direction = ParameterDirection.Input;
                     param_apellidom.Value = apellido_m;
                     command.Parameters.Add(param_apellidom);
-
-                    SqlParameter param_celular = new SqlParameter("@CELULAR", SqlDbType.VarChar);
-                    param_celular.Direction = ParameterDirection.Input;
-                    param_celular.Value = celular;
-                    command.Parameters.Add(param_celular);
 
                     SqlParameter param_boleta = new SqlParameter("@BOLETA", SqlDbType.VarChar);
                     param_boleta.Direction = ParameterDirection.Input;
