@@ -55,6 +55,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="zxing, Version=0.14.0.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\zxing.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="guardllet.aspx" />
@@ -71,6 +75,7 @@
     <Compile Include="Backend\Data\Accounts\SesionUsuario.cs" />
     <Compile Include="Backend\Data\Customers\DatosUsuario.cs" />
     <Compile Include="Backend\Data\Customers\ObtenerDatos.cs" />
+    <Compile Include="Backend\Data\Wallet\CreacionCodigo.cs" />
     <Compile Include="Backend\Data\Wallet\CreacionMonedero.cs" />
     <Compile Include="Backend\Data\Wallet\ObtenerMonedero.cs" />
     <Compile Include="guardllet.aspx.cs">

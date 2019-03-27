@@ -20,7 +20,7 @@ namespace Guardllet_Desarrollo.Backend.Data.Wallet
                 using (SqlConnection Conexion = new SqlConnection(StringConexion))
                 {
                     Conexion.Open();
-                    string cmd = string.Format("SELECT ID_MONEDERO FROM MONEDERO WHERE CODIGO ='{0}'", codigo);
+                    string cmd = string.Format("SELECT ID_MONEDERO FROM MONEDERO WHERE NUM_CODIGO ='{0}'", codigo);
                     DataSet Datos = new DataSet();
                     SqlDataAdapter DP = new SqlDataAdapter(cmd, Conexion);
                     DP.Fill(Datos);

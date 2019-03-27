@@ -12,7 +12,7 @@ namespace Guardllet_Desarrollo.Backend.Data.Wallet
 {
     public class CreacionMonedero
     {
-        public static bool Crear(string codigo)
+        public static bool Crear(string codigo, Byte[] img_codigo)
         {
             bool resultado = false;
             string StringConexion = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
@@ -29,10 +29,15 @@ namespace Guardllet_Desarrollo.Backend.Data.Wallet
                     param_saldo.Value = "0";
                     command.Parameters.Add(param_saldo);
 
-                    SqlParameter param_codigo = new SqlParameter("@CODIGO", SqlDbType.VarChar);
-                    param_codigo.Direction = ParameterDirection.Input;
-                    param_codigo.Value = codigo;
-                    command.Parameters.Add(param_codigo);
+                    SqlParameter param_n_codigo = new SqlParameter("@NUM_CODIGO", SqlDbType.VarChar);
+                    param_n_codigo.Direction = ParameterDirection.Input;
+                    param_n_codigo.Value = codigo;
+                    command.Parameters.Add(param_n_codigo);
+
+                    SqlParameter param_i_codigo = new SqlParameter("@IMG_CODIGO", SqlDbType.Image);
+                    param_i_codigo.Direction = ParameterDirection.Input;
+                    param_i_codigo.Value = img_codigo;
+                    command.Parameters.Add(param_i_codigo);
 
                     command.ExecuteScalar();
 

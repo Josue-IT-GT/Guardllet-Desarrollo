@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
+using System.Drawing;
 using Guardllet_Desarrollo.Backend.Data.Accounts;
 using Guardllet_Desarrollo.Backend.Data.Customers;
 using Guardllet_Desarrollo.Backend.Data.Wallet;
+
 
 namespace Guardllet_Desarrollo.Frontend.Accounts
 {
@@ -23,14 +24,22 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
             bool estado_datos = DatosUsuario.Inicializar(TxtCelular.Text);
             if (estado_datos)
             {
-                bool estado_monedero = CreacionMonedero.Crear("asdfghjklas");
+
+                string codigo_monedero = CreacionCodigo.Monedero(TxtCelular.Text.Trim());
+                Byte[] codigo_barras = CreacionCodigo.Barras(codigo_monedero);
+
+                bool estado_monedero = CreacionMonedero.Crear(codigo_monedero,codigo_barras);
                 if (estado_monedero)
                 {
+
                     int id_datos = ObtenerDatos.ObtenerIdxNumero(TxtCelular.Text);
-                    int id_monedero = ObtenerMonedero.ObtenerIdxCodigo("asdfghjklas");
+                    int id_monedero = ObtenerMonedero.ObtenerIdxCodigo(codigo_monedero);
+
                     bool estado_usuario = RegistroUsuarios.Registro(id_monedero, id_datos, TxtCorreo.Text, TxtContraseña.Text, TxtCelular.Text);
-                    
-                    Response.Redirect("Completar-Datos.aspx");
+                    if(estado_usuario)
+                    {
+                        Response.Redirect("Completar-Datos.aspx");
+                    }
                 }
             }
         }
