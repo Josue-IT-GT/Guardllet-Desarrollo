@@ -71,9 +71,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Backend\Data\Accounts\RegistroUsuarios.cs" />
+    <Compile Include="Backend\Data\Accounts\Datos.cs" />
+    <Compile Include="Backend\Data\Accounts\RegistroUsuario.cs" />
     <Compile Include="Backend\Data\Accounts\SesionUsuario.cs" />
-    <Compile Include="Backend\Data\Customers\DatosUsuario.cs" />
+    <Compile Include="Backend\Data\Customers\AgregarDatos.cs" />
     <Compile Include="Backend\Data\Customers\ObtenerDatos.cs" />
     <Compile Include="Backend\Data\Wallet\CreacionCodigo.cs" />
     <Compile Include="Backend\Data\Wallet\CreacionMonedero.cs" />

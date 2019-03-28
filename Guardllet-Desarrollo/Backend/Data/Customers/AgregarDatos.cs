@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace Guardllet_Desarrollo.Backend.Data.Customers
 {
-    public class DatosUsuario
+    public class AgregarDatos
     {
         public static bool Inicializar(string celular)
         {
@@ -74,7 +74,7 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
             }
         }
 
-        public static bool Agregar(string nombre, string apellido_p, string apellido_m, string boleta, string grupo)
+        public static bool Agregar(int id, string nombre, string apellido_p, string apellido_m, string boleta, string grupo)
         {
             bool resultado = false;
             string StringConexion = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
@@ -85,6 +85,11 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
                     Conexion.Open();
                     SqlCommand command = new SqlCommand("RegistroDatos", Conexion);
                     command.CommandType = CommandType.StoredProcedure;
+
+                    SqlParameter param_id = new SqlParameter("@ID", SqlDbType.Int);
+                    param_id.Direction = ParameterDirection.Input;
+                    param_id.Value = id;
+                    command.Parameters.Add(param_id);
 
                     SqlParameter param_nombre = new SqlParameter("@NOMBRE", SqlDbType.VarChar);
                     param_nombre.Direction = ParameterDirection.Input;
@@ -117,10 +122,9 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
                     command.Parameters.Add(param_foto);
 
                     command.ExecuteScalar();
-
                     Conexion.Close();
-
                     resultado = true;
+
                     return resultado;
                 }
             }

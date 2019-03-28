@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace Guardllet_Desarrollo.Backend.Data.Accounts
 {
-    public class RegistroUsuarios
+    public class RegistroUsuario
     {
         public static bool Registro(int id_monedero, int id_datos, string correo, string contrasena, string celular)
         {
