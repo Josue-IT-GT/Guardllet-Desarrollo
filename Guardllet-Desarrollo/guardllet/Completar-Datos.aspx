@@ -13,8 +13,8 @@
         <asp:TextBox ID="TxtNombre" runat="server"></asp:TextBox>
         <asp:TextBox ID="TxtApellidoP" runat="server"></asp:TextBox>
         <asp:TextBox ID="TxtApellidoM" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="ListaEscuelas" runat="server"></asp:DropDownList>
         <asp:TextBox ID="TxtBoleta" runat="server"></asp:TextBox>
-        <asp:TextBox ID="TxtGrupo" runat="server"></asp:TextBox>
         <asp:Button ID="BtnConfirmar" runat="server" Text="Guardar" OnClick="BtnConfirmar_Click" />
     </div>
     </form>

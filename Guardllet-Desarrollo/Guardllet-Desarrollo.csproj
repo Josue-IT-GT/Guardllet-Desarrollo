@@ -79,6 +79,7 @@
     <Compile Include="Backend\Data\Wallet\CreacionCodigo.cs" />
     <Compile Include="Backend\Data\Wallet\CreacionMonedero.cs" />
     <Compile Include="Backend\Data\Wallet\ObtenerMonedero.cs" />
+    <Compile Include="Backend\Emails\EnviarCorreo.cs" />
     <Compile Include="guardllet.aspx.cs">
       <DependentUpon>guardllet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -141,7 +142,6 @@
   <ItemGroup>
     <Folder Include="Backend\Data\Movements\" />
     <Folder Include="Backend\Data\Products\" />
-    <Folder Include="Backend\Emails\" />
     <Folder Include="Backend\Messages\" />
     <Folder Include="Backend\Reports\" />
     <Folder Include="Backend\Transactions\" />

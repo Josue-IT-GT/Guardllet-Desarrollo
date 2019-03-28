@@ -49,10 +49,10 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
                     param_boleta.Value = " ";
                     command.Parameters.Add(param_boleta);
 
-                    SqlParameter param_grupo = new SqlParameter("@GRUPO", SqlDbType.VarChar);
-                    param_grupo.Direction = ParameterDirection.Input;
-                    param_grupo.Value = " ";
-                    command.Parameters.Add(param_grupo);
+                    SqlParameter param_escuela = new SqlParameter("@ID_ESCUELA", SqlDbType.Int);
+                    param_escuela.Direction = ParameterDirection.Input;
+                    param_escuela.Value = 1;
+                    command.Parameters.Add(param_escuela);
 
                     SqlParameter param_foto = new SqlParameter("@FOTO", SqlDbType.VarChar);
                     param_foto.Direction = ParameterDirection.Input;
@@ -74,7 +74,7 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
             }
         }
 
-        public static bool Agregar(int id, string nombre, string apellido_p, string apellido_m, string boleta, string grupo)
+        public static bool Agregar(int id, string nombre, string apellido_p, string apellido_m, string boleta, string escuela)
         {
             bool resultado = false;
             string StringConexion = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
@@ -111,10 +111,10 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
                     param_boleta.Value = boleta;
                     command.Parameters.Add(param_boleta);
 
-                    SqlParameter param_grupo = new SqlParameter("@GRUPO", SqlDbType.VarChar);
-                    param_grupo.Direction = ParameterDirection.Input;
-                    param_grupo.Value = grupo;
-                    command.Parameters.Add(param_grupo);
+                    SqlParameter param_escuela = new SqlParameter("@ID_ESCUELA", SqlDbType.Int);
+                    param_escuela.Direction = ParameterDirection.Input;
+                    param_escuela.Value = escuela;
+                    command.Parameters.Add(param_escuela);
 
                     SqlParameter param_foto = new SqlParameter("@FOTO", SqlDbType.VarChar);
                     param_foto.Direction = ParameterDirection.Input;

@@ -10,6 +10,7 @@ using System.Web.Security;
 using Guardllet_Desarrollo.Backend.Data.Accounts;
 using Guardllet_Desarrollo.Backend.Data.Customers;
 using Guardllet_Desarrollo.Backend.Data.Wallet;
+using Guardllet_Desarrollo.Backend.Emails;
 
 
 namespace Guardllet_Desarrollo.Frontend.Accounts
@@ -23,7 +24,7 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
 
         protected void BtnRegistrar_Click(object sender, EventArgs e)
         {
-            bool estado_datos = AgregarDatos.Inicializar(TxtCelular.Text);
+            bool estado_datos = AgregarDatos.Inicializar(TxtCelular.Text.Trim());
             if (estado_datos)
             {
 
@@ -34,12 +35,14 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
                 if (estado_monedero)
                 {
 
-                    int id_datos = ObtenerDatos.ObtenerIdxNumero(TxtCelular.Text);
-                    int id_monedero = ObtenerMonedero.ObtenerIdxCodigo(codigo_monedero);
-
-                    bool estado_usuario = RegistroUsuario.Registro(id_monedero, id_datos, TxtCorreo.Text, TxtContraseña.Text, TxtCelular.Text);
+                    int id_datos = ObtenerDatos.IdxNumero(TxtCelular.Text.Trim());
+                    int id_monedero = ObtenerMonedero.IdxCodigo(codigo_monedero);
+                     
+                    bool estado_usuario = RegistroUsuario.Registro(id_monedero, id_datos, TxtCorreo.Text.Trim(), TxtContraseña.Text.Trim(), TxtCelular.Text.Trim());
                     if(estado_usuario)
                     {
+                        bool correo = EnviarCorreo.Registro(TxtCorreo.Text.Trim());
+
                         string id_usuario = Datos.ObtenerID(TxtCorreo.Text).ToString();
                         Session["usuario"] = id_usuario;
                         FormsAuthentication.SetAuthCookie(id_usuario, false);
