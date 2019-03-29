@@ -1,5 +1,10 @@
 CREATE DATABASE GUARDLLET
 
+GO
+
+USE GUARDLLET
+
+GO
 -------------------------------
 -------------------------------
 -- CREACION DE TABLAS ---------
@@ -19,7 +24,6 @@ CREATE TABLE DATOS(
 	APELLIDO_M	VARCHAR(50),
 	CELULAR VARCHAR(10),
 	BOLETA VARCHAR(10),
-	GRUPO VARCHAR(4),
 	FOTO IMAGE,	
 	
 	CONSTRAINT fk_ESCUELA_DATOS FOREIGN KEY (ID_ESCUELA) REFERENCES ESCUELAS(ID_ESCUELA),
@@ -68,6 +72,8 @@ CREATE TABLE MOVIMIENTO(
 	CONSTRAINT fk_PRODUCTO_MOVIMIENTO FOREIGN KEY (ID_PRODUCTO) REFERENCES PRODUCTO (ID_PRODUCTO)
 )
 
+GO
+
 -------------------------------
 -------------------------------
 -- CREACION DE PROCEDIMIENTOS -
@@ -114,6 +120,8 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
+GO
+
 ---PROCEDIMIENTO PARA REGISTRAR-----
 --------- USUARIO ------------------
 
@@ -155,6 +163,8 @@ Values
 )
 
 END
+
+GO
 
 ---PROCEDIMIENTO PARA INICIALIZAR-----
 ------------ DATOS -----------------
@@ -199,6 +209,8 @@ Values
 
 END
 
+GO
+
 CREATE PROCEDURE [dbo].[RegistroDatos]
 
 @ID INT,
@@ -227,6 +239,9 @@ SET
 WHERE ID_DATOS = @ID
 
 END
+
+GO
+
 ---PROCEDIMIENTO PARA REGISTRAR-----
 ----------- MENEDERO ---------------
 
@@ -258,10 +273,14 @@ Values
 
 END
 
+GO
+
 ----------------------------------
 ---INSERCION DE DATOS ESTATICOS---
 ----------------------------------
 
 INSERT INTO ESCUELAS (NOMBRE)
 VALUES ('Cecyt 13 "Ricardo Flores Magon"')
+
+GO
 
