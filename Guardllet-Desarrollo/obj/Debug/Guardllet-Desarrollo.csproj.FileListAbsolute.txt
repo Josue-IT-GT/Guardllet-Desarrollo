@@ -15,3 +15,9 @@ C:\Users\E 00\Documents\GitHub\Guardllet-Desarrollo\Guardllet-Desarrollo\bin\Gua
 C:\Users\E 00\Documents\GitHub\Guardllet-Desarrollo\Guardllet-Desarrollo\bin\Guardllet-Desarrollo.dll
 C:\Users\E 00\Documents\GitHub\Guardllet-Desarrollo\Guardllet-Desarrollo\bin\Guardllet-Desarrollo.pdb
 C:\Users\E 00\Documents\GitHub\Guardllet-Desarrollo\Guardllet-Desarrollo\obj\Debug\Guardllet-Desarrollo.pdb
+C:\Users\sala f\Documents\GitHub\Guardllet-Desarrollo\Guardllet-Desarrollo\bin\Guardllet-Desarrollo.dll.config
+C:\Users\sala f\Documents\GitHub\Guardllet-Desarrollo\Guardllet-Desarrollo\bin\Guardllet-Desarrollo.dll
+C:\Users\sala f\Documents\GitHub\Guardllet-Desarrollo\Guardllet-Desarrollo\bin\Guardllet-Desarrollo.pdb
+C:\Users\sala f\Documents\GitHub\Guardllet-Desarrollo\Guardllet-Desarrollo\obj\Debug\Guardllet-Desarrollo.csprojResolveAssemblyReference.cache
+C:\Users\sala f\Documents\GitHub\Guardllet-Desarrollo\Guardllet-Desarrollo\obj\Debug\Guardllet-Desarrollo.dll
+C:\Users\sala f\Documents\GitHub\Guardllet-Desarrollo\Guardllet-Desarrollo\obj\Debug\Guardllet-Desarrollo.pdb

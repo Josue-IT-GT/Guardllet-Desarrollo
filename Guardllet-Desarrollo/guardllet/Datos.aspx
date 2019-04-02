@@ -13,47 +13,47 @@
 <div class="container">
     <form id="form1" runat="server" class="form-horizontal">
             <div class="form-group">
-                <div class="col-md-10">
-                    <asp:TextBox ID="TxtNombre" runat="server" placeholder="Nombre(s)" CssClass="form-control"></asp:TextBox>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <asp:TextBox ID="TxtNombre" runat="server" placeholder="Nombre(s) *" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-md-12">
-                    <asp:TextBox ID="TxtApellidoP" runat="server" placeholder="Apellido Paterno"></asp:TextBox>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <asp:TextBox ID="TxtApellidoP" runat="server" placeholder="Apellido Paterno *" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-xs-12 col-sm-12 col-md-8">
-                    <asp:TextBox ID="TxtApellidoM" runat="server" placeholder="Apellido Materno"></asp:TextBox>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <asp:TextBox ID="TxtApellidoM" runat="server" placeholder="Apellido Materno *" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-xs-12 col-sm-12 col-md-8">
-                    <asp:TextBox ID="TxtCelular" runat="server" placeholder="Celular"></asp:TextBox>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <asp:TextBox ID="TxtCelular" runat="server" placeholder="Celular *" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-xs-12 col-sm-12 col-md-8">
-                    <asp:TextBox ID="TxtEdad" runat="server" placeholder="Edad"></asp:TextBox>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <asp:TextBox ID="TxtEdad" runat="server" placeholder="Edad *" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-xs-12 col-sm-12 col-md-8">
-                    <asp:DropDownList ID="ListaEscuelas" runat="server"></asp:DropDownList>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <asp:DropDownList ID="ListaEscuelas" runat="server" CssClass="form-control"></asp:DropDownList>
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-xs-12 col-sm-12 col-md-8">
-                    <asp:TextBox ID="TxtBoleta" runat="server" placeholder="Boleta"></asp:TextBox>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <asp:TextBox ID="TxtBoleta" runat="server" placeholder="Boleta *" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-xs-12 col-sm-12 col-md-8">
-                    <asp:TextBox ID="TxtGrupo" runat="server" placeholder="Grupo"></asp:TextBox>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <asp:TextBox ID="TxtGrupo" runat="server" placeholder="Grupo *" CssClass="form-control"></asp:TextBox>
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-xs-12 col-sm-12 col-md-8">
+                <div class="col-xs-12 col-sm-12 col-md-12">
                     <asp:Button ID="BtnConfirmar" runat="server" Text="Guardar" OnClick="BtnConfirmar_Click" CssClass="btn-primary"/>
                 </div>
             </div>

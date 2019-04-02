@@ -6,14 +6,23 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        body{
+            background-image: url(guardllet/multimedia/fondo.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+<form runat="server">
     <div>
-        <h1>Bienvendio</h1>
         <asp:Button ID="BtnIngresar" runat="server" Text="Entrar" OnClick="BtnIngresar_Click" />
         <asp:Button ID="BtnRegitrarse" runat="server" Text="Registrarte" OnClick="BtnRegitrarse_Click" />
     </div>
-    </form>
+</form>
+    
 </body>
 </html>
