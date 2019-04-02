@@ -13,7 +13,6 @@
         
         <asp:TextBox ID="TxtCorreo" runat="server"></asp:TextBox>
         <asp:TextBox ID="TxtContraseña" runat="server"></asp:TextBox>
-        <asp:TextBox ID="TxtCelular" runat="server"></asp:TextBox>
         <asp:Button ID="BtnRegistrar" runat="server" Text="Registrarte" OnClick="BtnRegistrar_Click" />
     </div>
     </form>

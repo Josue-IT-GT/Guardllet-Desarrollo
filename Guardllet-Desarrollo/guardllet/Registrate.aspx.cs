@@ -23,34 +23,17 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
         }
 
         protected void BtnRegistrar_Click(object sender, EventArgs e)
-        {
-            bool estado_datos = AgregarDatos.Inicializar(TxtCelular.Text.Trim());
-            if (estado_datos)
+        {     
+            int id_usuario = RegistroUsuario.Registro(TxtCorreo.Text.Trim(), TxtContraseña.Text.Trim());
+            if (id_usuario != 0)
             {
-
-                string codigo_monedero = CreacionCodigo.Monedero(TxtCelular.Text.Trim());
-                Byte[] codigo_barras = CreacionCodigo.Barras(codigo_monedero);
-
-                bool estado_monedero = CreacionMonedero.Crear(codigo_monedero,codigo_barras);
-                if (estado_monedero)
-                {
-
-                    int id_datos = ObtenerDatos.IdxNumero(TxtCelular.Text.Trim());
-                    int id_monedero = ObtenerMonedero.IdxCodigo(codigo_monedero);
-                     
-                    bool estado_usuario = RegistroUsuario.Registro(id_monedero, id_datos, TxtCorreo.Text.Trim(), TxtContraseña.Text.Trim(), TxtCelular.Text.Trim());
-                    if(estado_usuario)
-                    {
-                        bool correo = EnviarCorreo.Registro(TxtCorreo.Text.Trim());
-
-                        string id_usuario = Datos.ObtenerID(TxtCorreo.Text).ToString();
-                        Session["usuario"] = id_usuario;
-                        FormsAuthentication.SetAuthCookie(id_usuario, false);
-                        Response.Redirect("Completar-Datos.aspx", false);
-                        HttpContext.Current.ApplicationInstance.CompleteRequest();
-                    }
-                }
-            }
+            bool correo = EnviarCorreo.Registro(TxtCorreo.Text.Trim());
+            Session["usuario"] = id_usuario;
+            string id = id_usuario.ToString();
+            FormsAuthentication.SetAuthCookie(id, false);
+            Response.Redirect("Completar-Datos.aspx", false);
+            HttpContext.Current.ApplicationInstance.CompleteRequest();
+            }            
         }
     }
 }
