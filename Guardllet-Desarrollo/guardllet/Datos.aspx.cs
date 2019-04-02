@@ -35,11 +35,16 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
         protected void BtnConfirmar_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt16(Session["usuario"].ToString());
-            string escuela = ListaEscuelas.SelectedIndex.ToString();
-            bool estado_datos = AgregarDatos.Agregar(id,TxtNombre.Text.Trim(), TxtApellidoP.Text.Trim(),TxtApellidoM.Text.Trim(), TxtBoleta.Text.Trim(),escuela.Trim());
+
+            int escuela = Convert.ToInt16(ListaEscuelas.SelectedValue.ToString());
+
+            int estado_datos = AgregarDatos.Generales(TxtNombre.Text.Trim(), TxtApellidoP.Text.Trim(),TxtApellidoM.Text.Trim(), TxtCelular.Text.Trim());
             
-            if (estado_datos) 
+            int estado_datos_escolares = AgregarDatos.Escolares(escuela,TxtBoleta.Text.Trim(),TxtGrupo.Text.Trim(),TxtEdad.Text.Trim());
+
+            if (estado_datos != 0 & estado_datos_escolares != 0) 
             {
+
                 string id_usuario = id.ToString();
                 FormsAuthentication.SetAuthCookie(id_usuario, false);
                 Response.Redirect("MiDinero.aspx", false);

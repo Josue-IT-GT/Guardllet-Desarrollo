@@ -49,6 +49,24 @@ namespace Guardllet_Desarrollo.Frontend.Accounts {
         protected global::System.Web.UI.WebControls.TextBox TxtApellidoM;
         
         /// <summary>
+        /// Control TxtCelular.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtCelular;
+        
+        /// <summary>
+        /// Control TxtEdad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtEdad;
+        
+        /// <summary>
         /// Control ListaEscuelas.
         /// </summary>
         /// <remarks>
@@ -65,6 +83,15 @@ namespace Guardllet_Desarrollo.Frontend.Accounts {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtBoleta;
+        
+        /// <summary>
+        /// Control TxtGrupo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TxtGrupo;
         
         /// <summary>
         /// Control BtnConfirmar.

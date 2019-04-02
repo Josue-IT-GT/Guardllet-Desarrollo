@@ -62,7 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="guardllet.aspx" />
-    <Content Include="guardllet\Completar-Datos.aspx" />
+    <Content Include="guardllet\Datos.aspx" />
     <Content Include="guardllet\Entra.aspx" />
     <Content Include="guardllet\Registrate.aspx" />
     <Content Include="guardllet\Administrar.aspx" />
@@ -87,12 +87,12 @@
     <Compile Include="guardllet.aspx.designer.cs">
       <DependentUpon>guardllet.aspx</DependentUpon>
     </Compile>
-    <Compile Include="guardllet\Completar-Datos.aspx.cs">
-      <DependentUpon>Completar-Datos.aspx</DependentUpon>
+    <Compile Include="guardllet\Datos.aspx.cs">
+      <DependentUpon>Datos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="guardllet\Completar-Datos.aspx.designer.cs">
-      <DependentUpon>Completar-Datos.aspx</DependentUpon>
+    <Compile Include="guardllet\Datos.aspx.designer.cs">
+      <DependentUpon>Datos.aspx</DependentUpon>
     </Compile>
     <Compile Include="guardllet\Entra.aspx.cs">
       <DependentUpon>Entra.aspx</DependentUpon>

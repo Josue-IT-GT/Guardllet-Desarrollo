@@ -31,7 +31,7 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
             Session["usuario"] = id_usuario;
             string id = id_usuario.ToString();
             FormsAuthentication.SetAuthCookie(id, false);
-            Response.Redirect("Completar-Datos.aspx", false);
+            Response.Redirect("Datos.aspx", false);
             HttpContext.Current.ApplicationInstance.CompleteRequest();
             }            
         }
