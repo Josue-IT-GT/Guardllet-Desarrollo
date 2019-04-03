@@ -1,0 +1,25 @@
+﻿ body{
+
+    background-image: url(guardllet/Multimedia/fondo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+main{
+
+    background-color: #1b193d80;
+    width: 90%;
+    height: 800px;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
+
+}
+.nav-prs {
+
+    background-color: #1e1e474d;
+    border: #1d1d42;
+
+}

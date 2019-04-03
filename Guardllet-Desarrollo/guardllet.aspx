@@ -4,44 +4,50 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title></title>
-    <style type="text/css">
-        body{
-            background-image: url(guardllet/multimedia/fondo.jpg);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-        main{
-            background-color: #1b193d54;
-            width: 90%;
-            height: 800px;
-            margin-top: 5%;
-            margin-right: 5%;
-            margin-left: 5%;
-        }
-    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="guardllet.css"/>
+
+    <title>GUARDLLET</title>  
+
 </head>
 <body>
 <main>
-<nav>
-
-</nav>    
-    
-    <form runat="server">
-        <div>
-            <asp:Button ID="BtnIngresar" runat="server" Text="Entrar" OnClick="BtnIngresar_Click" />
-            <asp:Button ID="BtnRegitrarse" runat="server" Text="Registrarte" OnClick="BtnRegitrarse_Click" />
+<header>
+    <nav class="navbar navbar-default nav-prs">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
+                    <span class="sr-only">Menu</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand"> GUARDLLET</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">¿Quienes somos?</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>      
+           </div>
         </div>
-    </form>
+    </nav>    
+</header> 
+<form runat="server">
+    <div>
+        <asp:Button ID="BtnIngresar" runat="server" Text="Entrar" OnClick="BtnIngresar_Click" />
+        <asp:Button ID="BtnRegitrarse" runat="server" Text="Registrarte" OnClick="BtnRegitrarse_Click" />
+    </div>
+</form>
 </main>
 </body>
 </html>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="Bootstrap/js/jquery.js"></script>
+<script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
