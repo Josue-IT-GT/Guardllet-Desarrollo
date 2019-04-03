@@ -4,6 +4,12 @@ GO
 USE GUARDLLET
 GO
 
+-------------------------------
+-------------------------------
+---- CREACION DE TABLAS -------
+-------------------------------
+-------------------------------
+
 CREATE TABLE ESCUELAS(
 	ID_ESCUELA INT IDENTITY(1,1) PRIMARY KEY,
 	NOMBRE VARCHAR(100)
@@ -34,7 +40,7 @@ CREATE TABLE DATOS_GENERALES(
 CREATE TABLE MONEDERO(
 	ID_MONEDERO INT IDENTITY(1,1) PRIMARY KEY,
 	CODIGO VARCHAR(20),
-	IMAGEN_CODIGO IMAGE,
+	IMAGEN_CODIGO IMAGE null,
 	SALDO INT,
 )
 
@@ -95,8 +101,17 @@ CREATE TABLE COMPROBANTE(
 	TIPO INT,
 	NUMERO_AUTORIZACION VARCHAR(50),
 )
-
 GO
+
+------------------------------------
+------------------------------------
+-----CREACION DE PROCEDIMIENTOS ----
+------------------------------------
+------------------------------------
+
+
+---PROCEDIMIENTO PARA REGISTRAR-----
+--------- USUARIO ------------------
 
 CREATE PROCEDURE [dbo].[RegistroUsuario]
 
@@ -140,6 +155,201 @@ SET @ID_REGISTRO = @ID
 RETURN(@ID_REGISTRO)
 
 END
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+GO
+
+----PROCEDIMIENTO DE LOGIN------
+--------------------------------
+
+
+CREATE PROCEDURE  [dbo].[LoginUsuario]
+    
+	@CORREO VARCHAR(100), 
+	@CONTRASEÑA VARCHAR(300),
+	@RESULTADO BIT OUTPUT
+
+AS
+
+	DECLARE @CONTRASEÑA_CODIFICADA AS VARCHAR(300)
+	DECLARE @CONTRASEÑA_DECODIFICADA AS VARCHAR(300)
+
+BEGIN
+
+SELECT @CONTRASEÑA_CODIFICADA = CONTRASEÑA FROM USUARIO WHERE CORREO = @CORREO
+SET @CONTRASEÑA_DECODIFICADA = DECRYPTBYPASSPHRASE('password', @CONTRASEÑA_CODIFICADA)
+
+END
+
+BEGIN
+
+IF @CONTRASEÑA_DECODIFICADA = @CONTRASEÑA
+    SET @RESULTADO = 1
+ELSE
+	SET @RESULTADO = 0
+
+RETURN(@RESULTADO)
+
+END
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+GO
+
+---PROCEDIMIENTO PARA REGISTRAR------
+----------DATOS GENERALES------------
+
+CREATE PROCEDURE [dbo].[RegistroDatosGenerales]
+
+@NOMBRES VARCHAR(100),
+@APELLIDO_P VARCHAR(50),
+@APELLIDO_M	VARCHAR(50),
+@CELULAR VARCHAR(10),
+@FOTO IMAGE,
+@ID_REGISTRO INT OUTPUT
+
+AS
+
+BEGIN
+    
+Insert Into DATOS_GENERALES
+(
+    NOMBRES,
+	APELLIDO_P,
+	APELLIDO_M,
+	CELULAR,
+	FOTO
+)
+
+Values
+
+(
+	@NOMBRES,
+	@APELLIDO_P,
+	@APELLIDO_M,
+	@CELULAR,
+	@FOTO
+)
+
+END
+
+BEGIN
+
+DECLARE @ID AS INT 
+
+SELECT @ID = ID_DATOS_GENERALES FROM DATOS_GENERALES WHERE CELULAR = @CELULAR
+SET @ID_REGISTRO = @ID
+
+RETURN(@ID_REGISTRO)
+
+END
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+GO
+
+---PROCEDIMIENTO PARA REGISTRAR------
+----------DATOS ESCOLARES------------
+
+CREATE PROCEDURE [dbo].[RegistroDatosEscolares]
+
+@ID_ESCUELA INT,
+@BOLETA VARCHAR(10),
+@GRUPO	VARCHAR(6),
+@EDAD VARCHAR(2),
+@ID_REGISTRO INT OUTPUT
+
+AS
+
+BEGIN
+    
+Insert Into DATOS_ESCOLARES
+(
+    ID_ESCUELA,
+	BOLETA,
+	GRUPO,
+	EDAD
+)
+
+Values
+
+(
+	@ID_ESCUELA,
+	@BOLETA,
+	@GRUPO,
+	@EDAD
+)
+
+END
+
+BEGIN
+
+DECLARE @ID AS INT 
+
+SELECT @ID = ID_DATOS_ESCOLARES FROM DATOS_ESCOLARES WHERE BOLETA = @BOLETA
+SET @ID_REGISTRO = @ID
+
+RETURN(@ID_REGISTRO)
+
+END
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+GO
+
+---PROCEDIMIENTO PARA REGISTRAR------
+-------------MONEDERO----------------
+
+CREATE PROCEDURE [dbo].[RegistroMonedero]
+
+@CODIGO VARCHAR(MAX),
+@IMAGEN_CODIGO IMAGE,
+@SALDO INT,
+@ID_REGISTRO INT OUTPUT
+
+AS
+
+BEGIN
+    
+Insert Into MONEDERO
+(
+    CODIGO,
+	IMAGEN_CODIGO,
+	SALDO
+)
+
+Values
+
+(
+	@CODIGO,
+	@IMAGEN_CODIGO,
+	@SALDO
+)
+
+END
+
+BEGIN
+
+DECLARE @ID AS INT 
+
+SELECT @ID = ID_MONEDERO FROM MONEDERO WHERE CODIGO = @CODIGO
+SET @ID_REGISTRO = @ID
+
+RETURN(@ID_REGISTRO)
+
+END
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+GO
+
+----------------------------------
+---INSERCION DE DATOS ESTATICOS---
+----------------------------------
+
+INSERT INTO ESCUELAS(NOMBRE)
+VALUES ('Cecyt 13 "Ricardo Flores Magon"')
 
 GO
 
