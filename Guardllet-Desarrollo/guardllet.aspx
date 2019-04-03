@@ -30,20 +30,33 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="">¿Quienes somos?</a></li>
-                    <li><a href="">Contacto</a></li>
+                    <li><a href="#contenedor-1">Inicio</a></li>
+                    <li><a href="#contenedor-2">¿Quienes somos?</a></li>
+                    <li><a href="#contenedor-3">Contacto</a></li>
                 </ul>      
            </div>
         </div>
     </nav>    
-</header> 
-<form runat="server">
-    <div>
-        <asp:Button ID="BtnIngresar" runat="server" Text="Entrar" OnClick="BtnIngresar_Click" />
-        <asp:Button ID="BtnRegitrarse" runat="server" Text="Registrarte" OnClick="BtnRegitrarse_Click" />
-    </div>
-</form>
+</header>
+
+<div id="contenedor">
+    <form id="Form1" runat="server">
+        <div>
+            <asp:Button ID="BtnIngresar" runat="server" Text="Entrar" OnClick="BtnIngresar_Click" />
+            <asp:Button ID="BtnRegitrarse" runat="server" Text="Registrarte" OnClick="BtnRegitrarse_Click" />
+        </div>
+    </form>
+</div>
+<div id="contenedor-1" class="efecto">
+    jfggjhfjhf
+</div>
+<div id="contenedor-2" class="efecto">
+    kjgjkjkgjk
+</div>
+<div id="contenedor-3" class="efecto">
+    jhfjhfhjgf
+</div>
+
 </main>
 </body>
 </html>

@@ -20,10 +20,10 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
                 using (SqlConnection Conexion = new SqlConnection(StringConexion))
                 {
                     Conexion.Open();
-                    SqlCommand command = new SqlCommand("RegistroDatos", Conexion);
+                    SqlCommand command = new SqlCommand("RegistroDatosGenerales", Conexion);
                     command.CommandType = CommandType.StoredProcedure;
 
-                    SqlParameter param_nombre = new SqlParameter("@NOMBRE", SqlDbType.VarChar);
+                    SqlParameter param_nombre = new SqlParameter("@NOMBRES", SqlDbType.VarChar);
                     param_nombre.Direction = ParameterDirection.Input;
                     param_nombre.Value = nombre;
                     command.Parameters.Add(param_nombre);
@@ -76,7 +76,7 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
                 using (SqlConnection Conexion = new SqlConnection(StringConexion))
                 {
                     Conexion.Open();
-                    SqlCommand command = new SqlCommand("RegistroDatos", Conexion);
+                    SqlCommand command = new SqlCommand("RegistroDatosEscolares", Conexion);
                     command.CommandType = CommandType.StoredProcedure;
 
                     SqlParameter param_escuela = new SqlParameter("@ID_ESCUELA", SqlDbType.Int);

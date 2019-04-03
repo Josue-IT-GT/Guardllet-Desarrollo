@@ -36,7 +36,7 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
         {
             int id = Convert.ToInt16(Session["usuario"].ToString());
 
-            int escuela = Convert.ToInt16(ListaEscuelas.SelectedValue.ToString());
+            int escuela = Convert.ToInt16(ListaEscuelas.SelectedIndex.ToString());
 
             int estado_datos = AgregarDatos.Generales(TxtNombre.Text.Trim(), TxtApellidoP.Text.Trim(),TxtApellidoM.Text.Trim(), TxtCelular.Text.Trim());
             
@@ -44,7 +44,6 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
 
             if (estado_datos != 0 & estado_datos_escolares != 0) 
             {
-
                 string id_usuario = id.ToString();
                 FormsAuthentication.SetAuthCookie(id_usuario, false);
                 Response.Redirect("MiDinero.aspx", false);
