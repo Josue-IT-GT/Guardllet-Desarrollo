@@ -9,16 +9,19 @@ body{
     background-size: cover;
 
 }
+
 main{
 
+    position: absolute;
     background-color: #1b193d80;
     width: 90%;
-    height: 850px;
-    margin-bottom: 5%;
-    margin-top: 5%;
-    margin-right: 5%;
-    margin-left: 5%;
+    height: 800px;
+    margin: 5% 5% 5% 5%;
 
+}
+
+header {
+    height: 5%;
 }
 
 .nav-prs {
@@ -45,21 +48,13 @@ main{
  
 }
 
-#contenedor-principal{
-
-    position:absolute;
-    width:100%;
-    height:100%;
-    font-size:3em;
-    overflow:hidden;
- 
-}
- 
 #inicio{
-
-    background-color: #3c3c61; 
-     
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    overflow: hidden;
 }
+
 #quienes{
 
     background-color: #3c3c61; 
@@ -72,5 +67,6 @@ main{
 }
 
 .efecto:target{
-    height:100%;
+
+    height:95%;
 }

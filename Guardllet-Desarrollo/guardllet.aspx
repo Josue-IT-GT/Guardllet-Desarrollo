@@ -15,7 +15,9 @@
 
 </head>
 <body>
+
 <main>
+
 <header>
     <nav id="barra" class="navbar navbar-default nav-prs">
         <div class="container-fluid">
@@ -30,7 +32,7 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#contenedor-principal" onclick="window.location = #barra">Inicio</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#quienes">¿Quienes somos?</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>      
@@ -39,7 +41,7 @@
     </nav>    
 </header>
 
-<div id="contenedor-principal">
+<div id="inicio">
     <form id="Form1" runat="server">
         <div>
             <asp:Button ID="BtnIngresar" runat="server" Text="Entrar" OnClick="BtnIngresar_Click" />
@@ -49,11 +51,11 @@
 </div>
 
 <div id="quienes" class="efecto">
-    c
+
 </div>
 
 <div id="contacto" class="efecto">
-    <h2>3º contenedor</h2>
+
 </div>
 
 </main>
