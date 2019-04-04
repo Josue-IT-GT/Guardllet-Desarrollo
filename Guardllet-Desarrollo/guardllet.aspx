@@ -17,7 +17,7 @@
 <body>
 <main>
 <header>
-    <nav class="navbar navbar-default nav-prs">
+    <nav id="barra" class="navbar navbar-default nav-prs">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-1">
@@ -30,16 +30,16 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#contenedor-1">Inicio</a></li>
-                    <li><a href="#contenedor-2">¿Quienes somos?</a></li>
-                    <li><a href="#contenedor-3">Contacto</a></li>
+                    <li><a href="#contenedor-principal" onclick="window.location = #barra">Inicio</a></li>
+                    <li><a href="#quienes">¿Quienes somos?</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>      
            </div>
         </div>
     </nav>    
 </header>
 
-<div id="contenedor">
+<div id="contenedor-principal">
     <form id="Form1" runat="server">
         <div>
             <asp:Button ID="BtnIngresar" runat="server" Text="Entrar" OnClick="BtnIngresar_Click" />
@@ -47,14 +47,13 @@
         </div>
     </form>
 </div>
-<div id="contenedor-1" class="efecto">
-    jfggjhfjhf
+
+<div id="quienes" class="efecto">
+    c
 </div>
-<div id="contenedor-2" class="efecto">
-    kjgjkjkgjk
-</div>
-<div id="contenedor-3" class="efecto">
-    jhfjhfhjgf
+
+<div id="contacto" class="efecto">
+    <h2>3º contenedor</h2>
 </div>
 
 </main>
