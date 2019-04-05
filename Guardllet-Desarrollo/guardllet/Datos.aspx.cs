@@ -38,11 +38,15 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
 
             int escuela = Convert.ToInt16(ListaEscuelas.SelectedIndex.ToString());
 
-            int estado_datos = AgregarDatos.Generales(TxtNombre.Text.Trim(), TxtApellidoP.Text.Trim(),TxtApellidoM.Text.Trim(), TxtCelular.Text.Trim());
+            int registro_datos = AgregarDatos.Generales(TxtNombre.Text.Trim(), TxtApellidoP.Text.Trim(),TxtApellidoM.Text.Trim(), TxtCelular.Text.Trim());
             
-            int estado_datos_escolares = AgregarDatos.Escolares(escuela,TxtBoleta.Text.Trim(),TxtGrupo.Text.Trim(),TxtEdad.Text.Trim());
+            int registro_datos_escolares = AgregarDatos.Escolares(escuela,TxtBoleta.Text.Trim(),TxtGrupo.Text.Trim(),TxtEdad.Text.Trim());
 
-            if (estado_datos != 0 & estado_datos_escolares != 0) 
+            int vincular_datos = Datos.VincularDatosGenerales(id,registro_datos);
+
+            int vincular_datos_escolares = Datos.VincularDatosEscolares(registro_datos, registro_datos_escolares);
+
+            if (registro_datos != 0 & registro_datos_escolares != 0) 
             {
                 string id_usuario = id.ToString();
                 FormsAuthentication.SetAuthCookie(id_usuario, false);

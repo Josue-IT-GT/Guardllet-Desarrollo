@@ -160,6 +160,73 @@ END
 --------------------------------------------------------------
 GO
 
+---PROCEDIMIENTO PARA VINCULAR--------
+---------DATOS USUARIO----------------
+
+CREATE PROCEDURE  [dbo].[VincularDatosUsuario]
+
+@ID_USUARIO INT,
+@ID_DATOS_GENERALES INT,
+@ESTADO INT,
+@ID_REGISTRO INT OUTPUT
+
+AS
+
+BEGIN
+    
+UPDATE USUARIO
+
+SET
+ 
+ ID_DATOS_GENERALES = @ID_DATOS_GENERALES,
+ ESTADO = @ESTADO
+ 
+WHERE ID_USUARIO = @ID_USUARIO
+
+SET @ID_REGISTRO = @ID_USUARIO 
+
+RETURN(@ID_REGISTRO)
+
+END
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+GO
+
+---PROCEDIMIENTO PARA VINCULAR--------
+---------DATOS ESCOLARES--------------
+
+CREATE PROCEDURE  [dbo].[VincularDatosEscolares]
+
+@ID_DATOS_GENERALES INT,
+@ID_DATOS_ESCOLARES INT,
+
+@ID_REGISTRO INT OUTPUT
+
+AS
+
+BEGIN
+    
+UPDATE DATOS_GENERALES
+
+SET
+ 
+ @ID_DATOS_ESCOLARES = @ID_DATOS_ESCOLARES
+ 
+WHERE ID_DATOS_GENERALES = @ID_DATOS_ESCOLARES
+
+SET @ID_REGISTRO = @ID_DATOS_GENERALES 
+
+RETURN(@ID_REGISTRO)
+
+END
+
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+GO
+
 ----PROCEDIMIENTO DE LOGIN------
 --------------------------------
 
