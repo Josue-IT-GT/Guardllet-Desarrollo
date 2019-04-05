@@ -40,7 +40,7 @@ CREATE TABLE DATOS_GENERALES(
 CREATE TABLE MONEDERO(
 	ID_MONEDERO INT IDENTITY(1,1) PRIMARY KEY,
 	CODIGO VARCHAR(20),
-	IMAGEN_CODIGO IMAGE null,
+	IMAGEN_CODIGO IMAGE,
 	SALDO INT,
 )
 
@@ -370,9 +370,10 @@ GO
 
 CREATE PROCEDURE [dbo].[RegistroMonedero]
 
-@CODIGO VARCHAR(MAX),
+@CODIGO VARCHAR(20),
 @IMAGEN_CODIGO IMAGE,
 @SALDO INT,
+
 @ID_REGISTRO INT OUTPUT
 
 AS
@@ -402,6 +403,38 @@ DECLARE @ID AS INT
 
 SELECT @ID = ID_MONEDERO FROM MONEDERO WHERE CODIGO = @CODIGO
 SET @ID_REGISTRO = @ID
+
+RETURN(@ID_REGISTRO)
+
+END
+--------------------------------------------------------------
+--------------------------------------------------------------
+--------------------------------------------------------------
+GO
+
+---PROCEDIMIENTO PARA VINCULAR-------
+-------------MONEDERO----------------
+
+CREATE PROCEDURE [dbo].[VincularMonedero]
+
+@ID_USUARIO INT,
+@ID_MONEDERO INT,
+
+@ID_REGISTRO INT OUTPUT
+
+AS
+
+BEGIN
+    
+UPDATE USUARIO
+
+SET
+ 
+  ID_MONEDERO = @ID_MONEDERO
+
+WHERE ID_USUARIO = @ID_USUARIO
+
+SET @ID_REGISTRO = @ID_USUARIO 
 
 RETURN(@ID_REGISTRO)
 

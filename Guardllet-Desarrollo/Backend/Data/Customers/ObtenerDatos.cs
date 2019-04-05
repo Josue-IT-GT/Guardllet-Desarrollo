@@ -12,7 +12,26 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
 {
     public class ObtenerDatos
     {
-        public static Dictionary<string, string> Usuario(string id_usuario) 
+        public static int id_datos(int id_usuario) 
+        {
+            string StringConexion = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+
+            using (SqlConnection Conexion = new SqlConnection(StringConexion))
+            {
+                Conexion.Open();
+                string cmd = string.Format("SELECT ID_DATOS_GENERALES FROM USUARIO Where ID_USUARIO = {0}", id_usuario);
+                DataSet Datos = new DataSet();
+                SqlDataAdapter DP = new SqlDataAdapter(cmd, Conexion);
+                DP.Fill(Datos);
+                Conexion.Close();
+
+                int id = Convert.ToInt16(Datos.Tables[0].Rows[0]["ID_DATOS_GENERALES"].ToString());
+
+                return id;
+            }
+        }
+
+        public static Dictionary<string, string> Generales (int id_datos) 
         {
             string StringConexion = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
 
@@ -20,7 +39,7 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
             {
 
                 Conexion.Open();
-                string cmd = string.Format("SELECT * FROM USUARIO Where ID_USUARIO ='{0}'", id_usuario);
+                string cmd = string.Format("SELECT * FROM DATOS_GENERALES Where ID_DATOS_GENERALES = {0}", id_datos);
                 DataSet Datos = new DataSet();
                 SqlDataAdapter DP = new SqlDataAdapter(cmd, Conexion);
                 DP.Fill(Datos);
@@ -28,7 +47,7 @@ namespace Guardllet_Desarrollo.Backend.Data.Customers
 
                 try
                 {
-                    string nombre = Datos.Tables[0].Rows[0]["CORREO"].ToString();
+                    string nombre = Datos.Tables[0].Rows[0]["NOMBRES"].ToString();
                     string apellido_p = Datos.Tables[0].Rows[0]["APELLIDO_P"].ToString();
                     string apellido_m = Datos.Tables[0].Rows[0]["APELLIDO_M"].ToString();
 

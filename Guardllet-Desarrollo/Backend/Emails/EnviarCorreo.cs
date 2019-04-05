@@ -21,10 +21,10 @@ namespace Guardllet_Desarrollo.Backend.Emails
                 msg.BodyEncoding = System.Text.Encoding.UTF8;
                 msg.IsBodyHtml = true;
 
-                msg.From = new System.Net.Mail.MailAddress("josue.it1999@gmail.com");
+                msg.From = new System.Net.Mail.MailAddress("guardllet@gmail.com");
 
                 System.Net.Mail.SmtpClient clt = new System.Net.Mail.SmtpClient();
-                clt.Credentials = new System.Net.NetworkCredential("josue.it1999@gmail.com", "GANT312josue");
+                clt.Credentials = new System.Net.NetworkCredential("guardllet@gmail.com", "asdfg312");
                 clt.Port = 587;
                 clt.EnableSsl = true;
                 clt.Host = "smtp.gmail.com";

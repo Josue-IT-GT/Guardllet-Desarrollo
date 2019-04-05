@@ -43,4 +43,3 @@
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="Bootstrap/js/jquery.js"></script>
 <script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
-

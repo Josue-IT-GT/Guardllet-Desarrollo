@@ -99,7 +99,7 @@
     <Compile Include="Backend\Data\Customers\AgregarDatos.cs" />
     <Compile Include="Backend\Data\Customers\ObtenerDatos.cs" />
     <Compile Include="Backend\Data\Wallet\CreacionCodigo.cs" />
-    <Compile Include="Backend\Data\Wallet\CreacionMonedero.cs" />
+    <Compile Include="Backend\Data\Wallet\Monedero.cs" />
     <Compile Include="Backend\Data\Wallet\ObtenerMonedero.cs" />
     <Compile Include="Backend\Emails\EnviarCorreo.cs" />
     <Compile Include="guardllet.aspx.cs">

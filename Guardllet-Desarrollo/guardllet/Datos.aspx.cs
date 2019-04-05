@@ -59,15 +59,22 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
                             string codigo = CreacionCodigo.Monedero(TxtBoleta.Text.Trim());
                             Byte[] codigo_barras = CreacionCodigo.Barras(codigo);
 
-                            int registro_codigo = CreacionMonedero.Crear(codigo, codigo_barras);
+                            int registro_monedero = Monedero.Crear(codigo, codigo_barras);
 
+                            if (registro_monedero != 0)
+                            {
 
+                                int vincular_codigo = Monedero.Vincular(id, registro_monedero);
 
-
-                            string id_usuario = id.ToString();
-                            FormsAuthentication.SetAuthCookie(id_usuario, false);
-                            Response.Redirect("MiDinero.aspx", false);
-                            HttpContext.Current.ApplicationInstance.CompleteRequest();
+                                if (vincular_codigo != 0) 
+                                {
+                                    
+                                    string id_usuario = id.ToString();
+                                    FormsAuthentication.SetAuthCookie(id_usuario, false);
+                                    Response.Redirect("MiDinero.aspx", false);
+                                    HttpContext.Current.ApplicationInstance.CompleteRequest();
+                                }
+                            }
                         }
                     }
                 }
