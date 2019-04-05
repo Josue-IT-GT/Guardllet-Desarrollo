@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <asp:TextBox ID="TxtContraseña" runat="server" CssClass="form-control" placeholder="Contraseña"></asp:TextBox>
+                <asp:TextBox ID="TxtContraseña" runat="server" CssClass="form-control" placeholder="Contraseña" TextMode="Password"></asp:TextBox>
             </div>
         </div>
         <div class="form-group">

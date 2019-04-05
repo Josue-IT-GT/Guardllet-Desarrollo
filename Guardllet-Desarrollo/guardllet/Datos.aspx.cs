@@ -9,6 +9,7 @@ using System.Web.Security;
 
 using Guardllet_Desarrollo.Backend.Data.Customers;
 using Guardllet_Desarrollo.Backend.Data.Accounts;
+using Guardllet_Desarrollo.Backend.Data.Wallet;
 
 namespace Guardllet_Desarrollo.Frontend.Accounts
 {
@@ -38,20 +39,38 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
 
             int escuela = Convert.ToInt16(ListaEscuelas.SelectedIndex.ToString());
 
-            int registro_datos = AgregarDatos.Generales(TxtNombre.Text.Trim(), TxtApellidoP.Text.Trim(),TxtApellidoM.Text.Trim(), TxtCelular.Text.Trim());
-            
-            int registro_datos_escolares = AgregarDatos.Escolares(escuela,TxtBoleta.Text.Trim(),TxtGrupo.Text.Trim(),TxtEdad.Text.Trim());
+            int registro_datos = AgregarDatos.Generales(TxtNombre.Text.Trim(), TxtApellidoP.Text.Trim(), TxtApellidoM.Text.Trim(), TxtCelular.Text.Trim());
 
-            int vincular_datos = Datos.VincularDatosGenerales(id,registro_datos);
-
-            int vincular_datos_escolares = Datos.VincularDatosEscolares(registro_datos, registro_datos_escolares);
-
-            if (registro_datos != 0 & registro_datos_escolares != 0) 
+            if (registro_datos != 0) 
             {
-                string id_usuario = id.ToString();
-                FormsAuthentication.SetAuthCookie(id_usuario, false);
-                Response.Redirect("MiDinero.aspx", false);
-                HttpContext.Current.ApplicationInstance.CompleteRequest();
+                int registro_datos_escolares = AgregarDatos.Escolares(escuela, TxtBoleta.Text.Trim(), TxtGrupo.Text.Trim(), TxtEdad.Text.Trim());
+
+                if (registro_datos_escolares != 0)
+                {
+                    int vincular_datos = Datos.VincularDatosGenerales(id, registro_datos);
+
+                    if (vincular_datos != 0)
+                    {
+                        int vincular_datos_escolares = Datos.VincularDatosEscolares(registro_datos, registro_datos_escolares);
+
+                        if (vincular_datos_escolares != 0)
+                        {
+
+                            string codigo = CreacionCodigo.Monedero(TxtBoleta.Text.Trim());
+                            Byte[] codigo_barras = CreacionCodigo.Barras(codigo);
+
+                            int registro_codigo = CreacionMonedero.Crear(codigo, codigo_barras);
+
+
+
+
+                            string id_usuario = id.ToString();
+                            FormsAuthentication.SetAuthCookie(id_usuario, false);
+                            Response.Redirect("MiDinero.aspx", false);
+                            HttpContext.Current.ApplicationInstance.CompleteRequest();
+                        }
+                    }
+                }
             }
         }
     }

@@ -136,7 +136,7 @@ namespace Guardllet_Desarrollo.Backend.Data.Accounts
                 using (SqlConnection Conexion = new SqlConnection(StringConexion))
                 {
                     Conexion.Open();
-                    SqlCommand command = new SqlCommand("VincularDatosUsuario", Conexion);
+                    SqlCommand command = new SqlCommand("VincularDatosEscolares", Conexion);
                     command.CommandType = CommandType.StoredProcedure;
 
                     SqlParameter param_id_usuario = new SqlParameter("@ID_DATOS_GENERALES", SqlDbType.Int);

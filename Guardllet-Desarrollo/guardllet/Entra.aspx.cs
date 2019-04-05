@@ -29,10 +29,9 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
             bool login = SesionUsuario.IniciarSesion(TxtCorreo.Text.Trim(),TxtContraseña.Text.Trim());
             if (login)
             {
-                int id = Datos.ObtenerID(TxtCorreo.Text.Trim());
-                string id_usuario = id.ToString();
-                Session["usuario"] = id_usuario;
-                FormsAuthentication.SetAuthCookie(id_usuario, false);
+                string id = Convert.ToString(Datos.ObtenerID(TxtCorreo.Text.Trim()));
+                Session["usuario"] = id;
+                FormsAuthentication.SetAuthCookie(id, false);
                 Response.Redirect("MiDinero.aspx", false);
                 HttpContext.Current.ApplicationInstance.CompleteRequest();
             }
