@@ -8,11 +8,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="Css/Datos/Datos.css">
+
     
     <title></title>
 
 </head>
 <body>
+<header>
+
+</header>
+<div class="Contenedor-titulo">
+    <h3>Completa tu datos</h3>
+</div>
 <div class="container">
     <form id="form1" runat="server" class="form-horizontal">
             <div class="form-group">

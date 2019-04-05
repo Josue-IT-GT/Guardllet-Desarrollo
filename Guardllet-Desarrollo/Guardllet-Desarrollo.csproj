@@ -83,6 +83,9 @@
     <Content Include="guardllet\Bootstrap\js\bootstrap.min.js" />
     <Content Include="guardllet\Bootstrap\js\jquery.js" />
     <Content Include="guardllet\Bootstrap\js\npm.js" />
+    <Content Include="guardllet\Css\Datos\Datos.css" />
+    <Content Include="guardllet\Css\MiDinero\MiDinero.css" />
+    <Content Include="guardllet\Css\Registrate\Registrate.css" />
     <Content Include="guardllet\Datos.aspx" />
     <Content Include="guardllet\Entra.aspx" />
     <Content Include="guardllet\Multimedia\fondo.jpg" />
@@ -184,10 +187,7 @@
     <Folder Include="Backend\Reports\" />
     <Folder Include="Backend\Transactions\" />
     <Folder Include="guardllet\Css\Administrar\" />
-    <Folder Include="guardllet\Css\Completar-Datos\" />
     <Folder Include="guardllet\Css\Entra\" />
-    <Folder Include="guardllet\Css\MiDinero\" />
-    <Folder Include="guardllet\Css\Registrate\" />
     <Folder Include="guardllet\Css\Vender\" />
     <Folder Include="guardllet\Js\Administrar\" />
     <Folder Include="guardllet\Js\Completar-Datos\" />

@@ -8,12 +8,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="Css/Registrate/Registrate.css"
 
     <title></title>
 
 </head>
 <body>
-<div class="container">
+
+<header>
+
+</header>
+
+<div class="Contenedor-titulo">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <h3>REGISTRATE</h3>
+    </div>
+</div>
+
+<div class="container margen">
     <form id="form1" runat="server" class="form-horizontal">
         <div class="form-group">
             <div class="col-xs-12 col-sm-12 col-md-12">

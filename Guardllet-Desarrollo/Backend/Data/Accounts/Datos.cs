@@ -82,6 +82,58 @@ namespace Guardllet_Desarrollo.Backend.Data.Accounts
             }     
         }
 
+        public static int ObtenerTipoUsuario(int id_usuario) 
+        {
+            string StringConexion = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+            try
+            {
+                using (SqlConnection Conexion = new SqlConnection(StringConexion))
+                {
+                    Conexion.Open();
+                    string cmd = string.Format("SELECT TIPO_USUARIO FROM USUARIO WHERE ID_USUARIO = {0}", id_usuario);
+                    DataSet Datos = new DataSet();
+                    SqlDataAdapter DP = new SqlDataAdapter(cmd, Conexion);
+                    DP.Fill(Datos);
+                    Conexion.Close();
+
+                    int Id = Convert.ToInt32(Datos.Tables[0].Rows[0]["TIPO_USUARIO"].ToString());
+
+                    return Id;
+                }
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc);
+                return 0;
+            }     
+        }
+
+        public static int ObtenerEstadoUsuario(int id_usuario)
+        {
+            string StringConexion = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+            try
+            {
+                using (SqlConnection Conexion = new SqlConnection(StringConexion))
+                {
+                    Conexion.Open();
+                    string cmd = string.Format("SELECT ESTADO FROM USUARIO WHERE ID_USUARIO = {0}", id_usuario);
+                    DataSet Datos = new DataSet();
+                    SqlDataAdapter DP = new SqlDataAdapter(cmd, Conexion);
+                    DP.Fill(Datos);
+                    Conexion.Close();
+
+                    int Id = Convert.ToInt32(Datos.Tables[0].Rows[0]["ESTADO"].ToString());
+
+                    return Id;
+                }
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc);
+                return 0;
+            }
+        }
+
         public static int VincularDatosGenerales(int id_usuario, int id_datos_generales)
         {
             string StringConexion = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
