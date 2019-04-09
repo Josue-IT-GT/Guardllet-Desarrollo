@@ -24,18 +24,25 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
 
         protected void BtnRegistrar_Click(object sender, EventArgs e)
         {     
-            int id_usuario = RegistroUsuario.Registro(TxtCorreo.Text.Trim(), TxtContraseña.Text.Trim());
-
-            if (id_usuario != 0)
+            
+            if(TxtContraseña.Text == TxtContraseñaC.Text)
             {
-                bool correo = EnviarCorreo.Registro(TxtCorreo.Text.Trim());
+                if (TxtContraseña.Text.Length >= 8)
+                {
+                    int id_usuario = RegistroUsuario.Registro(TxtCorreo.Text.Trim(), TxtContraseña.Text.Trim());
 
-                Session["usuario"] = id_usuario;
-                string id = id_usuario.ToString();
-                FormsAuthentication.SetAuthCookie(id, false);
-                Response.Redirect("Datos.aspx", false);
-                HttpContext.Current.ApplicationInstance.CompleteRequest();
-            }            
+                    if (id_usuario != 0)
+                    {
+                        bool correo = EnviarCorreo.Registro(TxtCorreo.Text.Trim());
+
+                        Session["usuario"] = id_usuario;
+                        string id = id_usuario.ToString();
+                        FormsAuthentication.SetAuthCookie(id, false);
+                        Response.Redirect("Datos.aspx", false);
+                        HttpContext.Current.ApplicationInstance.CompleteRequest();
+                    }
+                }
+            }       
         }
     }
 }

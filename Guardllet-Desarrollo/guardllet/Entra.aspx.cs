@@ -30,61 +30,69 @@ namespace Guardllet_Desarrollo.Frontend.Accounts
 
 
 
+
             bool login = SesionUsuario.IniciarSesion(TxtCorreo.Text.Trim(),TxtContraseña.Text.Trim());
             if (login)
+
+            if(TxtCorreo.Text != "" & TxtContraseña.Text != "")
+
             {
-                int id = Datos.ObtenerID(TxtCorreo.Text.Trim());
-
-                int tipo_usuario = Datos.ObtenerTipoUsuario(Convert.ToInt16(id));
-
-                if (tipo_usuario == 1)
+                bool login = SesionUsuario.IniciarSesion(TxtCorreo.Text.Trim(), TxtContraseña.Text.Trim());
+                if (login)
                 {
-                    int estado_usuario = Datos.ObtenerEstadoUsuario(Convert.ToInt16(id));
+                    int id = Datos.ObtenerID(TxtCorreo.Text.Trim());
 
-                    if (estado_usuario == 1)
+                    int tipo_usuario = Datos.ObtenerTipoUsuario(Convert.ToInt16(id));
+
+                    if (tipo_usuario == 1)
+                    {
+                        int estado_usuario = Datos.ObtenerEstadoUsuario(Convert.ToInt16(id));
+
+                        if (estado_usuario == 1)
+                        {
+                            Session["usuario"] = id;
+                            string id_usuario = id.ToString();
+                            FormsAuthentication.SetAuthCookie(id_usuario, false);
+                            Response.Redirect("Datos.aspx", false);
+                            HttpContext.Current.ApplicationInstance.CompleteRequest();
+                        }
+                        else if (estado_usuario == 3)
+                        {
+
+                        }
+                        else
+                        {
+                            Session["usuario"] = id;
+                            string id_usuario = id.ToString();
+                            FormsAuthentication.SetAuthCookie(id_usuario, false);
+                            Response.Redirect("MiDinero.aspx", false);
+                            HttpContext.Current.ApplicationInstance.CompleteRequest();
+                        }
+
+                    }
+
+                    if (tipo_usuario == 2)
                     {
                         Session["usuario"] = id;
                         string id_usuario = id.ToString();
                         FormsAuthentication.SetAuthCookie(id_usuario, false);
-                        Response.Redirect("Datos.aspx", false);
+                        Response.Redirect("Vender.aspx", false);
                         HttpContext.Current.ApplicationInstance.CompleteRequest();
                     }
-                    else if (estado_usuario == 3)
-                    {
 
-                    }
-                    else 
+                    if (tipo_usuario == 3)
                     {
                         Session["usuario"] = id;
                         string id_usuario = id.ToString();
                         FormsAuthentication.SetAuthCookie(id_usuario, false);
-                        Response.Redirect("MiDinero.aspx", false);
+                        Response.Redirect("Administrar.aspx", false);
                         HttpContext.Current.ApplicationInstance.CompleteRequest();
                     }
-                    
                 }
-
-                if (tipo_usuario == 2)
+                else
                 {
-                    Session["usuario"] = id;
-                    string id_usuario = id.ToString();
-                    FormsAuthentication.SetAuthCookie(id_usuario, false);
-                    Response.Redirect("Vender.aspx", false);
-                    HttpContext.Current.ApplicationInstance.CompleteRequest();
-                }
 
-                if (tipo_usuario == 3)
-                {
-                    Session["usuario"] = id;
-                    string id_usuario = id.ToString();
-                    FormsAuthentication.SetAuthCookie(id_usuario, false);
-                    Response.Redirect("Administrar.aspx", false);
-                    HttpContext.Current.ApplicationInstance.CompleteRequest();
-                }
-            }
-            else 
-            {
- 
+                }  
             }
         }
     }
