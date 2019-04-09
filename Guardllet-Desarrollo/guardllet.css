@@ -32,9 +32,9 @@ header {
     position: relative;
 }
 
-
-
-
+.color{
+    color: white;
+}
 
 .efecto{
 
@@ -70,4 +70,26 @@ header {
 .efecto:target{
 
     height:95%;
+}
+
+.btn-Ingresar{
+
+    width: 90%;
+    height: 70px;
+    border-radius: 15px;
+    border: solid 2px white;
+    background-color: #5350846e;
+    color: white;
+
+}
+
+.btn-Registro{
+
+    width: 90%;
+    height: 70px;
+    border-radius: 15px;
+    border: solid 2px white;
+    background-color: #5350846e;
+    color: white;
+
 }

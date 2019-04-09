@@ -28,13 +28,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand"> GUARDLLET</a>
+                <a href="#" class="navbar-brand color"> GUARDLLET</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#quienes">¿Quienes somos?</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                <ul class="nav navbar-nav navbar-right color">
+                    <li><a href="#inicio" class="color">Inicio</a></li>
+                    <li><a href="#quienes" class="color">¿Quienes somos?</a></li>
+                    <li><a href="#contacto" class="color">Contacto</a></li>
                 </ul>      
            </div>
         </div>
@@ -44,10 +44,16 @@
 <div id="inicio">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4">
-             <form id="Form1" runat="server">
-                <div>
-                    <asp:Button ID="BtnIngresar" runat="server" Text="Entrar" OnClick="BtnIngresar_Click" />
-                    <asp:Button ID="BtnRegitrarse" runat="server" Text="Registrarte" OnClick="BtnRegitrarse_Click" />
+             <form id="Form1" runat="server" class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <asp:Button ID="BtnIngresar" runat="server" Text="Entrar" OnClick="BtnIngresar_Click" CssClass="btn-Ingresar"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <asp:Button ID="BtnRegitrarse" runat="server" Text="Registrarte" OnClick="BtnRegitrarse_Click" CssClass="btn-Registro"/>
+                    </div>
                 </div>
             </form>
         </div>
