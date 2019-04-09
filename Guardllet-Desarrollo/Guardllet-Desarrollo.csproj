@@ -100,6 +100,7 @@
     <Compile Include="Backend\Data\Accounts\Datos.cs" />
     <Compile Include="Backend\Data\Accounts\RegistroUsuario.cs" />
     <Compile Include="Backend\Data\Accounts\SesionUsuario.cs" />
+    <Compile Include="Backend\Data\Accounts\Validar.cs" />
     <Compile Include="Backend\Data\Customers\AgregarDatos.cs" />
     <Compile Include="Backend\Data\Customers\ObtenerDatos.cs" />
     <Compile Include="Backend\Data\Wallet\CreacionCodigo.cs" />
