@@ -19,9 +19,11 @@
 
 </header>
 <div class="Contenedor-titulo">
-    <h3>Completa tu datos</h3>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <h3 class="titulo">COMPLETA TUS DATOS</h3>
+    </div>
 </div>
-<div class="container">
+<div class="container margen">
     <form id="form1" runat="server" class="form-horizontal">
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -65,7 +67,7 @@
             </div>
             <div class="form-group">
                 <div class="col-xs-12 col-sm-12 col-md-12">
-                    <asp:Button ID="BtnConfirmar" runat="server" Text="Guardar" OnClick="BtnConfirmar_Click" CssClass="btn-primary"/>
+                    <asp:Button ID="BtnConfirmar" runat="server" Text="Continuar" OnClick="BtnConfirmar_Click" CssClass="btn-completar"/>
                 </div>
             </div>
     </form>

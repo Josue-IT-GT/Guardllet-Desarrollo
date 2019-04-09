@@ -8,12 +8,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="Css/Entra/Entra.css">
+
 
     <title></title>
 
 </head>
 <body>
-<div class="container">
+
+<header>
+
+</header>
+
+<div class="Contenedor-titulo">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <h3 class="titulo">INICIA SESION</h3>
+    </div>
+</div>
+
+<div class="container margen">
     <form id="form1" runat="server" class="form-horizontal">
         <div class="form-group">
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -27,12 +40,13 @@
         </div>
         <div class="form-group">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <asp:Button ID="BtnEntrar" runat="server" Text="Entrar" OnClick="BtnEntrar_Click" CssClass="btn-primary"/>
+                <asp:Button ID="BtnEntrar" runat="server" Text="Entrar" OnClick="BtnEntrar_Click" CssClass="btn-registrate"/>
             </div>
         </div>
+        <h4><center>O</center></h4>
         <div class="form-group">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <asp:Button ID="BtnResgitrarse" runat="server" Text="Registrarte" OnClick="BtnResgitrarse_Click" CssClass="btn-primary"/>
+                <asp:Button ID="BtnResgitrarse" runat="server" Text="Registrarte" OnClick="BtnResgitrarse_Click" CssClass="btn-entra"/>
             </div>
         </div>
     </form>

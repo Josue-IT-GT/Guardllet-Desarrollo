@@ -21,7 +21,7 @@
 
 <div class="Contenedor-titulo">
     <div class="col-xs-12 col-sm-12 col-md-12">
-        <h3>REGISTRATE</h3>
+        <h3 class="titulo">REGISTRATE</h3>
     </div>
 </div>
 
@@ -44,7 +44,7 @@
         </div>
         <div class="form-group">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <asp:Button ID="BtnRegistrar" runat="server" Text="Registrarte" OnClick="BtnRegistrar_Click" CssClass="btn-primary"/>
+                <asp:Button ID="BtnRegistrar" runat="server" Text="Continuar" OnClick="BtnRegistrar_Click" CssClass="btn-registrate"/>
             </div>
         </div>
     </form>

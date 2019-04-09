@@ -42,12 +42,19 @@
 </header>
 
 <div id="inicio">
-    <form id="Form1" runat="server">
-        <div>
-            <asp:Button ID="BtnIngresar" runat="server" Text="Entrar" OnClick="BtnIngresar_Click" />
-            <asp:Button ID="BtnRegitrarse" runat="server" Text="Registrarte" OnClick="BtnRegitrarse_Click" />
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-4">
+             <form id="Form1" runat="server">
+                <div>
+                    <asp:Button ID="BtnIngresar" runat="server" Text="Entrar" OnClick="BtnIngresar_Click" />
+                    <asp:Button ID="BtnRegitrarse" runat="server" Text="Registrarte" OnClick="BtnRegitrarse_Click" />
+                </div>
+            </form>
         </div>
-    </form>
+        <div class="col-xs-12 col-sm-12 col-md-8">
+       
+        </div>
+    </div>
 </div>
 
 <div id="quienes" class="efecto">

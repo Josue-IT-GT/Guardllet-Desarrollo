@@ -11,7 +11,7 @@ header {
 
 .margen {
 
-    margin-top: 3%;
+    margin-top: 5%;
 
 }
 
@@ -25,16 +25,23 @@ header {
 
 }
 
+.titulo {
+
+
+}
+
 .btn-registrate {
 
     width: 80%;
     height: 40px;
-    margin: 5% 10% 10%;
+    margin: 5% 10% 0%;
 
 }
 
-.titulo {
+.btn-entra {
 
-   
+    width: 80%;
+    height: 40px;
+    margin: 0% 10% 0%;
 
 }
