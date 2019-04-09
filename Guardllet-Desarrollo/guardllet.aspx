@@ -44,7 +44,7 @@
 <div id="inicio">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-4">
-             <form id="Form1" runat="server" class="form-horizontal">
+             <form id="Form1" runat="server">
                 <div class="form-group">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <asp:Button ID="BtnIngresar" runat="server" Text="Entrar" OnClick="BtnIngresar_Click" CssClass="btn-Ingresar"/>
